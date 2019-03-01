@@ -2,6 +2,8 @@
 
 # Content Table
 * [Functions](#f)
+	* [Default arguments](#da)
+	* [Flexible arguments](#fa)
 * [Modules](#m)
 * [Virtual Environment](#ve)
 
@@ -22,7 +24,9 @@ If not returning anything, python return `None` by default.
 
 As C, function should be defined **before** calling it.
 
-#### Defult argument
+<a id="da"></a>
+
+#### Default arguments
 python support "default argument" in function.
 
 ```python
@@ -32,6 +36,8 @@ def print_hello(name="World"):
 print_hello("Anna")		# Hello Anna
 print_hello()			# Hello World
 ```
+<a id="fa"></a>
+
 #### Flexible arguments
 python funciton allow to accept arbitary argument.  
 
