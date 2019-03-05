@@ -1,11 +1,11 @@
 <a id="ct"></a>
 
 # Content Table
-* [Functions](#f)
-	* [Default arguments](#da)
-	* [Flexible arguments](#fa)
-* [Modules](#m)
-* [Virtual Environment](#ve)
+* [Functions](#Functions)
+	* [Default arguments](#Default-arguments)
+	* [Flexible arguments](#Flexible-arguments)
+* [Modules](#Modules)
+* [Virtual Environment](#Virtual-Environment)
 
 [Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
 
@@ -52,7 +52,7 @@ def add_numbers(*numbers):
 result = add_nubmers(5, 10, 8, 3)
 print(result)	# 26
 ```
-[Return to Content Table](#ct)
+[Return to Content Table](#Content-Table)
 
 <a id="m"></a>
 
@@ -110,7 +110,7 @@ or
 ```python
 x//y
 ```
-[Return to Content Table](#ct)
+[Return to Content Table](#Content-Table)
 
 <a id="ve"></a>
 
@@ -129,4 +129,4 @@ To install:
 
 [More Here](http://www.cse.unsw.edu.au/~cs1531/19T1/extra/virtualenv.html)
 
-[Return to Content Table](#ct)
+[Return to Content Table](#Content-Table)

@@ -171,7 +171,7 @@ logic operator different from C:
 |&&| and|
 | \|\||or|  
 
-[Return to Content Table](#ct)
+[Return to Content Table](#Content-Table)
 
 -----------
 <a id="wl"></a>

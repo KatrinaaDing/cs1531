@@ -1,13 +1,11 @@
-[Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
-<a id="ct"></a>
+[Return to README.md](https://github.com/KatrinaaDing/cs15
+31/blob/master/README.md)
 
 # Content Table
 
-* [File Input and Output (I/O)](#fial)
-* [CSV File](#cf)
-* [Pickle](#p)
-
-<a id="fiao"></a>
+* [File Input and Output (I/O)](#File-Input-and-Output-(I/O))
+* [CSV File](#CSV-File)
+* [Pickle](#Pickle)
 
 # File Input and Output (I/O)
 
@@ -73,9 +71,7 @@ line5
 
 But those read write function cannot handle complex data type file. We can use **CSV file**.
 
-[Content table](#ct)
-
-<a id="cf"></a>
+[Return to Content Table](#Content-Table)
 
 # CSV File
 **CSV file** which stands for comma separated values is a file type that **stores table like data with rows and coloumns**, similar to a spreadsheet.  
@@ -114,9 +110,7 @@ writer = csv.writer(f)
 writer.writerow([1580, "Mary", "Green", 2018, 3, "UTS"])  # pass in a list of new info in order of the table
 ```
 
-[Content table](#ct)
-
-<a id="p"></a>
+[Return to Content Table](#Content-Table)
 
 # Pickle
 Pickle is a python library and it's a way of **serializing** and **deserializing** any python object into a `.pickle` file.  
@@ -182,4 +176,4 @@ Then excute the `.py` file again:
 abc 5
 ```
 
-[Content Table](#ct)
+[Return to Content Table](#Content-Table)

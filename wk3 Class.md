@@ -1,16 +1,14 @@
-<a id='ct'></a>
 
 # Content Table
 
-* [Class](#c)
-	* [Encapsulation](#e)
-	* [Abstraction and Inheritance](#ai)
-	* [Print a Class Instance](#paci)
-	* [Association Realationship in OOP](#ario)
+* [Class](#Class)
+	* [Encapsulation](#Encapsulation)
+	* [Abstraction and Inheritance](#Abstraction-and-Inheritance)
+	* [Print a Class Instance](#Print-a-Class-Instance)
+	* [Association Relationship in OOP](#Association-Relationship-in-OOP)
 
 [Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
 
-<a id='c'></a>
 
 # Class
 ```python
@@ -37,9 +35,7 @@ age = person2.calculate_age()
 
 [**Reason using double underscore**](http://igorsobreira.com/2010/09/16/difference-between-one-underline-and-two-underlines-in-python.html)
 
-[Content Table](#ct)
-
-<a id='e'></a>
+[Content Table](#Content-Table)
 
 ## Encapsulation
 **encapsulation**, an act that hiding the internal representation or the state of an object from the outside. Like credit card must keep private.  
@@ -98,8 +94,7 @@ print(x.my_attribute)	# => Calling getter => 5
 x.my_attribute = 10		# => Calling setter
 print(x.my_attribute)	# => Calling getter => 10
 ```
-[Content Table](#ct)
-<a id='ai'></a>
+[Content Table](#Content-Table)
 
 ## Abstraction & Inheritance
 **parent/super class:** have common behavior/attribute.  
@@ -176,9 +171,7 @@ In child class, to call constructor(or method) from parent class, use `super().c
 
 If don't overwite a abstract method in child class, will automatically implement parent's method.
 
-[Content Table](#ct)
-
-<a id='paci'></a>
+[Content Table](#Content-Table)
 
 ## Print a Class Instance
 Python can auto convert num to string for `print()`, but for class it doesn't know how to do, hence it will print the pointer by default.
@@ -192,11 +185,9 @@ def __str__(self):
 	return self._first_name + " " + self._last_name
 ```
 
-[Content Table](#ct)
+[Content Table](#Content-Table)
 
-<a id='ario'></a>
-
-## Association Realationship in OOP
+## Association Relationship in OOP
 > I assume you know about UML diagrams
 
 
@@ -248,6 +239,6 @@ if __name__ == "__main__":
 	
 	# destroy my_book will also destory those pages
 ```
-[Content Table](#ct)
+[Content Table](#Content-Table)
 
 

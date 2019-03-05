@@ -1,13 +1,11 @@
-<a id='ct'></a>
 
 # Content Table
 
-* [Nested Function](#nf)
-* [Decorator](#d)
+* [Nested Function](#Nested-Function)
+* [Decorator](#Decorator)
 
 [Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
 
-<a id='nf'></a>
 
 # Nested Function
 Python allows to assign a function reference to a variable.  
@@ -66,9 +64,7 @@ greet(get_up)
 
 For further usage see *Decorator* below.
 
-[Content Table](#ct)
-
-<a id='d'></a>
+[Content Table](#Content-Table)
 
 # Decorator
 
@@ -107,4 +103,4 @@ print(say_hi())
 => Hello John
 => Hi Lucy
 ```
-[Content Table](#ct)
+[Content Table](#Content-Table)
