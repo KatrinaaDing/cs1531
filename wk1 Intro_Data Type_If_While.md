@@ -8,7 +8,7 @@
 * [Data Structure](#ds)
 	* [List](#l)
 	* [Sets](#s)
-	* [Dictionary](#d)
+	* [Dictionary](#Dictionary)
 
 [Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
 
