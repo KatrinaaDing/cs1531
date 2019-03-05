@@ -1,8 +1,8 @@
 # Content Table
 * [Python](#Python)
 * [String and Data Type](#String-and-Data-Type)
-* [`if` Statement](#\`if\`-Statement)
-* [`while` Loop](#`while`-Loop)
+* [`if` Statement](#if-Statement)
+* [`while` Loop](#while-Loop)
 * [Data Structure](#Data-Structure)
 	* [List](#List)
 	* [Sets](#Sets)
@@ -146,7 +146,7 @@ print(new_word)
 
 --------------------------------
 
-# `if` Statement   
+# if Statement   
 
 ```python
 if (condition):
@@ -176,7 +176,7 @@ logic operator different from C:
 -----------
 <a id="wl"></a>
 
-# `while` Loop  
+# while Loop  
 
 ```python
 >>> while (i<n):
