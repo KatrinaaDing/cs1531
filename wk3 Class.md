@@ -96,7 +96,7 @@ print(x.my_attribute)	# => Calling getter => 10
 ```
 [Content Table](#Content-Table)
 
-## Abstraction & Inheritance
+## Abstraction and Inheritance
 **parent/super class:** have common behavior/attribute.  
 **child/sub class:** can overwrite the behavior of parent class.   
 **abstract:** an empty method (templet) inside parent class, allowing child classs to implement theirselves. This kind of method is **abstract method**, and the class containing abstract method is **abstract class**.

@@ -1,9 +1,8 @@
-[Return to README.md](https://github.com/KatrinaaDing/cs15
-31/blob/master/README.md)
+[Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
 
 # Content Table
 
-* [File Input and Output (I/O)](#File-Input-and-Output-(I/O))
+* [File Input and Output (I/O)](#File-Input-and-Output-IO)
 * [CSV File](#CSV-File)
 * [Pickle](#Pickle)
 
