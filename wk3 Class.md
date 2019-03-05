@@ -2,12 +2,13 @@
 
 # Content Table
 
-* Class
+* [Class](#c)
 	* [Encapsulation](#e)
 	* [Abstraction and Inheritance](#ai)
 	* [Print a Class Instance](#paci)
 	* [Association Realationship in OOP](#ario)
-
+	
+<a id='c'></a>
 
 # Class
 ```python
