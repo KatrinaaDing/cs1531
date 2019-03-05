@@ -5,7 +5,7 @@
 Content Table
 
 * Wk 1
-	* [Intro + Data Type + If + While loop + Data Structure](cs1531/wk1 Intro_Data Type_If_While.md)
+	* [Intro + Data Type + If + While loop + Data Structure](https://github.com/KatrinaaDing/cs1531/master/wk1\ Intro_Data\ Type_If_While.md)
 * Wk 2
 	* [Functions + Modules + Virtual Machines](wk2 Functions_Modules.md)
 * Wk 3
