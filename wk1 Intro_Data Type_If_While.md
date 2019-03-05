@@ -1,19 +1,15 @@
-<a id="ct"></a>
-
 # Content Table
-* [Python](#p)
-* [String and Data Type](#sadt)
-* [`if` Statement](#if)
-* [`while` Loop](#wl)
-* [Data Structure](#ds)
-	* [List](#l)
-	* [Sets](#s)
+* [Python](#Python)
+* [String and Data Type](#String-and-Data-Type)
+* [`if` Statement](#`if`-Statement)
+* [`while` Loop](#`while`-Loop)
+* [Data Structure](#Data-Structure)
+	* [List](#List)
+	* [Sets](#Sets)
 	* [Dictionary](#Dictionary)
 
 [Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
 
-
-<a id="p"></a>
 
 # Python
 
@@ -54,10 +50,9 @@ python can memorize the last value.
 >>> _
 3
 ```
-[Return to Content Table](#ct)
+[Return to Content Table](#Content-Table)
 
 ------
-<a id="sadt"></a>
 
 # String and Data Type
 ```python
@@ -147,10 +142,9 @@ or
 new_word = word[::-1]
 print(new_word)
 ```
-[Return to Content Table](#ct)
+[Return to Content Table](#Content-Table)
 
 --------------------------------
-<a id="is"></a>
 
 # `if` Statement   
 
@@ -223,11 +217,9 @@ logic operator different from C:
 1
 0
 ```
-[Return to Content Table](#ct)
+[Return to Content Table](#Content-Table)
 
 -------
-<a id="ds"></a>
-
 # Data Structure
 Four main collection data types:
 
@@ -286,9 +278,7 @@ print(odd[1:])
 =>[2, 3]
 ```
 
-[Return to Content Table](#ct)
-
-<a id="s"></a>
+[Return to Content Table](#Content-Table)
 
 ## Sets
 `fruits = {"oragne", "mango", "pineapple"}`  
@@ -306,9 +296,7 @@ error
 **.remove()**, removing item from the set.  
 **Set doesn't allow duplicate, so adding existing item will change nothing.
 
-[Return to Content Table](#ct)
-
-<a id="d"></a>
+[Return to Content Table](#Content-Table)
 
 ## Dictionary
 Similar to a list, being indexed using type rather than number. Has no order, every time run will have different order.   
@@ -390,4 +378,4 @@ to access both key and value in `for` loop, do:
 for fruit,value in fruits.items():
     ...
 ```
-[Return to Content Table](#ct)
+[Return to Content Table](#Content-Table)
