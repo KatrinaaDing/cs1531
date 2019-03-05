@@ -1,3 +1,4 @@
+[Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
 # Pytest
 
 To install:
@@ -7,7 +8,7 @@ To install:
 ```
 To check if it's installed:
 
-```python
+```
 @in-terminal: python3
 >>> import pytest
 >>>        # no error occurs means it's installed correctly
