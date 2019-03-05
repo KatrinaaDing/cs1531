@@ -1,7 +1,7 @@
 # Content Table
 * [Python](#Python)
 * [String and Data Type](#String-and-Data-Type)
-* [`if` Statement](#`if`-Statement)
+* [`if` Statement](#\`if\`-Statement)
 * [`while` Loop](#`while`-Loop)
 * [Data Structure](#Data-Structure)
 	* [List](#List)
