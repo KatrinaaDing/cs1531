@@ -13,7 +13,7 @@
 # Class
 ```python
 class Person:	# the name of the class, starting with capital letter
-	def __init__(self, firstname, lastname):		# constructor, a special method
+	def __init__(self, firstname, lastname):	# constructor, a special method, declare variables inside
 		self.first_name = firstname				# is called when create an instance of the class
 		self.last_name = lastname				# can be called by using the class's name followed by a bracket
 		self.dob = datetime.now()
@@ -31,6 +31,13 @@ person2 = Person("Isaac", "Carr")
 person1.walk(50)		# calling walk method, can only pass in "distance" as person has "self"=="John"
 						# equals to person1.walk("John",50)		
 age = person2.calculate_age()
+```
+`__init__()` can also be:
+
+```python
+def __init__(firstname, lastname):
+	this.first_name = firstname
+	this.last_name = lastname
 ```
 
 [**Reason using double underscore**](http://igorsobreira.com/2010/09/16/difference-between-one-underline-and-two-underlines-in-python.html)
@@ -114,7 +121,7 @@ class Shape:				# an parent + abstract class
 	...
 	
 class Rectangle(Shape):		# Rectangle is subclass of Shape
-	def _init_(self, color, width, height):
+	def __init__(self, color, width, height):
 		self._color = color
 		self._width = width
 		self._height = height
@@ -167,7 +174,16 @@ class Shape(ABC):		# bracket shows where does it "belong" to
 	...
 ```
 
-In child class, to call constructor(or method) from parent class, use `super().constructorName(attribute)`.   
+In child class, to call constructor(or method) from parent class, use `super().constructorName(attribute)`.  
+e.g.
+
+```python
+def __init__(self, colour, radius) {
+	super().__init__(colour)  # This use super's __init__ to initiate variable locally
+	self.radius = radius
+}
+```
+
 
 If don't overwite a abstract method in child class, will automatically implement parent's method.
 
@@ -205,7 +221,7 @@ class Car:
 		self._make = make
 		
 	def drive(self):
-		print("Is driving"< self._make)
+		print("Is driving" + self._make)
 
 class Engine:
 	def __init(self):
