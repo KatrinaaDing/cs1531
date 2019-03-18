@@ -184,8 +184,8 @@ def __init__(self, colour, radius) {
 }
 ```
 
-
-If don't overwite a abstract method in child class, will automatically implement parent's method.
+**Why using `@abstractmethod`?**  
+If don't use `@abstractmethod`, when developer forget to overwite the method in child class, python will automatically implement parent's method (and basically do nothing). If implement `@abstractmethod` in parent class, forgeting to overwrite the method will give an error.
 
 [Content Table](#Content-Table)
 
