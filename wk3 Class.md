@@ -101,6 +101,42 @@ print(x.my_attribute)	# => Calling getter => 5
 x.my_attribute = 10		# => Calling setter
 print(x.my_attribute)	# => Calling getter => 10
 ```
+
+`@Property` and `@xxx.setter` perform the same as `Property()` built-in function, which accepts **getter** followed by **setter**. 
+
+```python
+class Account():
+	def __init__(self, name, bal, min=50.0):
+		self._name = name
+		self._balance = bal
+		self._min_bal = min
+	
+	name = property(_get_name, _set_name)
+	balance = property(_get_ballance, _set_balance)
+	
+	# specify the getter and setter for variables,  
+	# when client access the variables (e.g. account1.name), 
+	# python will first find "name = property(...)"
+	# and find the getter/setter of "name"
+	
+	# It's better to make getter and setter private.
+	
+	def _get_name(self):	# client can't directly using the getter now
+		return self._name
+	
+	def _get_balance(self):
+		return self._balance
+	
+	def _set_name(self, name):
+		self._name = name
+	
+	def _set_balance(self, balance):
+		self._balance = balance
+```
+
+
+For more `property()` see comp1531 Wed Mar13 Lecture recording 40:30.
+
 [Content Table](#Content-Table)
 
 ## Abstraction and Inheritance
