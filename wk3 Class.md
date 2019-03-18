@@ -102,7 +102,7 @@ x.my_attribute = 10		# => Calling setter
 print(x.my_attribute)	# => Calling getter => 10
 ```
 
-`@Property` and `@xxx.setter` perform the same as `Property()` built-in function, which accepts **getter** followed by **setter**. 
+`@Property` and `@xxx.setter` perform the same as `Property()` built-in fuonenction, which accepts **getter** followed by **setter**. 
 
 ```python
 class Account():
