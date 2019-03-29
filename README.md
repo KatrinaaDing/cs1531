@@ -10,6 +10,10 @@ Content Table
 	* [Functions + Modules + Virtual Machines](wk2%20Functions_Modules.md)
 * Wk 3
 	* [Class](wk3%20Class.md)
-	* [Nested Func + Decorator](wk3%20Nested%20Func_Decorator.md)
-	* [File system](wk3%20Files.md)
-	* [Pytest](wk3%20Pytest.md)
+* Wk 4
+	* [Nested Func + Decorator](wk4%20Nested%20Func_Decorator.md)
+	* [File system](wk4%20Files.md)
+* Wk 5
+	* [Pytest](wk5%20Pytest.md)
+* Wk6
+	* [Exception Handling](wk6%20Exception%20Handling.md) 
