@@ -64,3 +64,30 @@ class TestLibrary():	# create class inside test file
 		assert(result.get_title() == "aaa") # the function comes from Book
 
 ```
+
+### @pytest.fixture
+fixture are a way doing some **initialisation and set up** before running test cases, and **clean up** after test cases.
+
+```python
+@pytest.fixture
+def warehouse_fixture():
+	warehouse = WareHouse()
+	
+	... # some instance cases
+	
+	return warehouse
+
+# when testing the instance, 
+# pass in the fixture (with some cases it created) 
+# to the test function 
+def test_warehouse(warehouse_fixture):
+	...
+	result = warehouse_fixture.aMethod(xxx)
+	
+	assert(result == xxx)
+	
+# another test on same instance
+def test_search_result(warehouse_fixture):
+	...
+	assert(...)
+```
