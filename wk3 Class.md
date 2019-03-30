@@ -102,6 +102,7 @@ x.my_attribute = 10		# => Calling setter
 print(x.my_attribute)	# => Calling getter => 10
 ```
 
+### @property
 `@Property` and `@xxx.setter` perform the same as `Property()` built-in fuonenction, which accepts **getter** followed by **setter**. 
 
 ```python
@@ -134,8 +135,37 @@ class Account():
 		self._balance = balance
 ```
 
-
 For more `property()` see comp1531 Wed Mar13 Lecture recording 40:30.
+
+
+### @classmethod
+`@classmethod` only invoke the class, but not the instance. Class variable is like a global variable, if want to modify the class variable (associate in class level), has to use the `@classmethod`; if want to modify the instance variable, just use instance method as normal.
+
+```python
+class Product(ABC):
+	# An internally generated id to assign a unique code
+	__id = -1		# double underscore, a "real" private variable, in class level, not in instance
+	
+	def __init__(self, name, price):
+		self._item_code = self.generate_id()
+		self._name = name
+		self._price = price
+	
+	def generate_id(self):
+		Product.__id += 1	 # As it's modifying a 
+		return Product.__id  # class-level/private/global variable,
+							 # use "Product.__id" 
+							 # instead of "self.__id"
+							 # (recall that "self" is actually
+							 # auto passing in an instance)
+		
+		
+	@classmethod  		 # telling python that this method is to 
+	def set_id(cls, id): # modify class variable
+		cls.__id = id	 
+```
+
+
 
 [Content Table](#Content-Table)
 
