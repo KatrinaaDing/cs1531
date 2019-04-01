@@ -20,7 +20,8 @@ def index():
 	
 
 # to run the project
-app.run()
+if __name__=="__main__": # optionally add a name guard
+	app.run()
 
 ```
 
