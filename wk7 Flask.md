@@ -10,13 +10,13 @@
 	* [using variable](#using-variable)
 	* [defining method](#defining-method)
 * [Jinja](#Jinja)
-	* [passing variable into html] (#passing-variable-into-html)
+	* [passing variable into html] (#pvih)
 	* [for loop](#for-loop)
 	* [if statement](#if-statement)
 	* [filter](#filter)
 * [Template Inheritance](#Template-Inheritance)
 * [Navigation (href)](#n)
-	* [url_for] (#url_for)
+	* [url_for] (#uf)
 * [Forms](#Forms)
 	* [Redirecting](#Redirecting) 
 
@@ -56,7 +56,7 @@ terminal will indicate the port it's running on.
 * Running on http://127.0.0.1:5000/
 ...
 ```
-
+[Return to Content Table](#Content-Table)
 ### debug mode
 Debug mode allows us to refresh the page without close (quit) the application.
 To endter debug mode, change the run mode:
@@ -64,14 +64,14 @@ To endter debug mode, change the run mode:
 ```python
 app.run(debug=True)
 ```
-
+[Return to Content Table](#Content-Table)
 ### set running port
 By default the port is 5000.
 
 ```python
 app.run(port=8085)
 ``` 
-
+[Return to Content Table](#Content-Table)
 ## routes
 
 
@@ -105,6 +105,7 @@ def home(name):
 ```
 _Note: the function variable name **must match** the variable name inside route._
 
+[Return to Content Table](#Content-Table)
 ### defining method
 By default, method is set to `GET`. To change method, define in route:
 
@@ -119,6 +120,7 @@ By default, method is set to `GET`. To change method, define in route:
 # to use both
 @app.route("/home", methods=["GET", "POST"])
 ```
+[Return to Content Table](#Content-Table)
 
 ## Jinja
 in the directory, create a new directory called `templates`, and inside `/templates` create a new `.html` file.
@@ -139,7 +141,9 @@ def index():
 
 app.run(debug=True)
 ```
+[Return to Content Table](#Content-Table)
 
+<a id="pvih"></a>
 ### passing variable into html
 Jinja2 allows dynamic content on websites. To pass in a variable from `app.py` to the html file:  
 
@@ -170,6 +174,8 @@ inside the html file:
 ```
 Jinja can pass in any type of variable (such as int, strint, list, etc.) **except for** functions (`print("HELLO")`) and assignment (`x = 5`).
 
+[Return to Content Table](#Content-Table)
+
 ### for loop
 Jinja allows us to do `for` loop in html file with control struct syntax.
 
@@ -195,6 +201,8 @@ In Jinja:
 </body>
 ...
 ```
+
+[Return to Content Table](#Content-Table)
 
 ### if statement
 Also using control structure syntax:
@@ -230,6 +238,8 @@ In Jinja:
 ...
 ```
 
+[Return to Content Table](#Content-Table)
+
 ### filter
 Jinja has useful filters similar to python's method, with syntax `|`.
 
@@ -246,6 +256,7 @@ For example, if want to capitalize the first letter in a list of string:
 ```
 For more plz visit [Jinja Homepage](http://jinja.pocoo.org/).
 
+[Return to Content Table](#Content-Table)
 <a id='ti'></a>
 ## Template Inheritance
 A layout html file will be like a template, with a flexible block, and any other html file can be the content filled in the block.
@@ -282,6 +293,9 @@ Hello World!
 Welcome to my page!
 Thank you for visiting my webpage!
 ```
+
+[Return to Content Table](#Content-Table)
+
 <a id='n'></a>
 ## Navigation (href)
 a link in html is defined by:
@@ -289,7 +303,10 @@ a link in html is defined by:
 ```html
 <a href="/somepage">Goto page</a>
 ```
-<a id='url_for'></a>
+
+[Return to Content Table](#Content-Table)
+
+<a id='uf'></a>
 ### url_for
 `url_for()` automatically return the coresponnding route of an specific function name.  
 Has to `form flask import url_for`.
@@ -321,6 +338,9 @@ Using `url_for` within a link (Benifit: don't have to modify every url):
 
 # the link will go to the route that defined in names()
 ```
+
+[Return to Content Table](#Content-Table)
+
 <a id='f'></a>
 ## Forms
 To generate an imput text box on webpage:
@@ -371,6 +391,7 @@ def login():
 	return render_template("login.html")
 
 ```
+[Return to Content Table](#Content-Table)
 
 ### Redirecting
 Use `redirect()` to login different user.  
