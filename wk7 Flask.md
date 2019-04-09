@@ -1,4 +1,28 @@
+[Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
+
+# Content Table
+
+* [Set up](#set-up)
+* [Structure](#structure)
+	* [debug mode](#debug-mode)
+	* [set running port](#set-running-port)
+* [Routes](#routes)
+	* [using variable](#using-variable)
+	* [defining method](#defining-method)
+* [Jinja](#Jinja)
+	* [passing variable into html] (#passing-variable-into-html)
+	* [for loop](#for-loop)
+	* [if statement](#if-statement)
+	* [filter](#filter)
+* [Template Inheritance](#Template-Inheritance)
+* [Navigation (href)](#n)
+	* [url_for] (#url_for)
+* [Forms](#Forms)
+	* [Redirecting](#Redirecting) 
+
+	
 # Flask
+
 ## set up
 
 1. install virtual environment `virtualenv --python=python3.6 env`
@@ -48,7 +72,7 @@ By default the port is 5000.
 app.run(port=8085)
 ``` 
 
-## @app.route()
+## routes
 
 
 example: `@app.route("/")` `@app.route("/home")`  
@@ -116,7 +140,7 @@ def index():
 app.run(debug=True)
 ```
 
-### pasing variable into html
+### passing variable into html
 Jinja2 allows dynamic content on websites. To pass in a variable from `app.py` to the html file:  
 
 inside .py file:
@@ -221,3 +245,135 @@ For example, if want to capitalize the first letter in a list of string:
 ...
 ```
 For more plz visit [Jinja Homepage](http://jinja.pocoo.org/).
+
+<a id='ti'></a>
+## Template Inheritance
+A layout html file will be like a template, with a flexible block, and any other html file can be the content filled in the block.
+
+To define a block in `layout.html`:  
+
+```html
+...
+<body>
+	<h1>Hello World!</h1>
+		{% bock var_name %}
+		{% endblock %}
+	<footer>Thank you for visiting!</footer>
+
+</body>
+...
+```
+
+In the inheritance html file(e.g. `home.html`): 
+
+```html
+# only need to write the block content
+{% extends "lay.out.html" %}  
+{% block var_name %}
+	Welcome to my page!
+{% endblock %}
+
+```
+
+Displaying `home.html` will be:
+
+```html
+Hello World!
+Welcome to my page!
+Thank you for visiting my webpage!
+```
+<a id='n'></a>
+## Navigation (href)
+a link in html is defined by:
+
+```html
+<a href="/somepage">Goto page</a>
+```
+<a id='url_for'></a>
+### url_for
+`url_for()` automatically return the coresponnding route of an specific function name.  
+Has to `form flask import url_for`.
+
+```python
+@app.route("/")
+def index():
+	return render_template("index.html")
+	
+@app.route("/names")
+def names():
+	return render_template("names.html")
+
+@app.route("/home/<name>")
+def home_name(name):
+	return render_template("home.html", names=name)
+	
+# url_for("index") --> /
+# url_for("index") --> /names
+# url_for("home_name", name="mary") --> /home/mary
+
+```
+
+Using `url_for` within a link (Benifit: don't have to modify every url):
+
+```html
+# Notes: must use double large brackets and double quaotation
+<a href="{{ url_for('names') }}">Go to Names</a>
+
+# the link will go to the route that defined in names()
+```
+<a id='f'></a>
+## Forms
+To generate an imput text box on webpage:
+
+```html
+Username: <input placeholder="Enter Text..." name="username"/>
+# input: the text box
+# placeholder: comment displayed in the box
+# name: the name of the box
+
+Password: <input: placeholder="Enter Password.." name="password" type="password" />
+# "password" type will display all input as "*" 
+```
+
+a submit button:
+
+```html
+<input type="submit" value="Submit">
+# this will be a button instead of text box as it has "submit" type
+```
+
+Full version of a form (in `login.html`):
+
+```html
+# "POST" for pushing data to the server
+# if want to use "POST" in this route, have to define method in the .py file (see defining method)
+<form method="POST">
+	Username: <input placeholder="Enter Text..." name="username"/> <br/> # newline symbol
+	Password: <input: placeholder="Enter Password.." name="password" type="password" />
+	<input type="submit" value="Submit">
+	# the submit button will submit the infomation to server
+</form>
+```
+
+To handle the data sent from the form, in `app.py`:
+
+```python
+@app.route("/login", methods=["GET", "POST"])
+def login():
+	# only with "POST" request(submit form in this case) this will run
+	if request.method == "POST":
+		# get data by pass in the name of the particular input from form
+		username = request.form["username"]
+		password = request.form["password"]
+		
+		# redirect the user the home page
+		return redirect(url_for("index"))
+	return render_template("login.html")
+
+```
+
+### Redirecting
+Use `redirect()` to login different user.  
+Has to `from flask import redirect`.
+
+ 
