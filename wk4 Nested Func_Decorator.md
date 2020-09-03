@@ -60,7 +60,7 @@ greet(get_up)
 => hello world
 => HELLO WORLD
 ```
-`get_lo/up` is assigned to the variable `text_transformer`, and `text_transformer`, which actually is `get_lo/up`, accept the parameter `"Hello Word"`, then `get_lo/up` return the result and pass it to `message` inside `greet()`.
+`get_lo/up()` is assigned to the variable `text_transformer`, and `text_transformer`, which actually is `get_lo/up()`, accept the parameter `"Hello World"`, then `get_lo/up` return the result and pass it to `message` inside `greet()`.
 
 For further usage see *Decorator* below.
 
@@ -73,7 +73,7 @@ For further usage see *Decorator* below.
 def my_function():	
 	...
 ```
-Decorator is dynamically alter the functionality of a function, like a **wrapper** to the function and let us execute **specific code** before and after the function runs.
+Decorator is dynamically altering the functionality of a function, like a **wrapper** to the function and let us execute **specific code** before and after the function runs.
 
 The **specific code** can be written by our own or use python proporties.
 
@@ -95,7 +95,7 @@ def say_hello():	# [say_hello() might be auto passed into decorator]
 
 @add_name("Lucy")
 def say_hi():
-	reuturn "Hi "
+	return "Hi "
 
 print(say_hello())
 print(say_hi())

@@ -17,10 +17,13 @@ To check if it's installed:
 To run pytest:
 
 ```
-@in-terminal: python3 -m pytest test_example.py # name of the test file
+@in-terminal: python3 -m pytest test_example.py 
 ```
 
+where `test_example.py` is the name of the test file.
+
 ## Writing Pytest
+
 Firstly, import the file that we want to test and the function inside the file,  
 i.e.
 
@@ -66,7 +69,7 @@ class TestLibrary():	# create class inside test file
 ```
 
 ### @pytest.fixture
-fixture are a way doing some **initialisation and set up** before running test cases, and **clean up** after test cases.
+Fixture are a way doing some **initialisation and set up** before running test cases, and **clean up** after test cases.
 
 ```python
 @pytest.fixture

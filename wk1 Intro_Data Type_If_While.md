@@ -14,9 +14,9 @@
 # Python
 
 Python is interpret, dynamically typed language. 
-Interpret means can directly running using shell(no compilation and linking).  
+"Interpret" means it can be directly ran using shell (no compilation and linking).  
 
-don't need files (e.g. .c file)
+i.e. Doesn't need files (e.g. .c file)
 
 ```python
 >>> width = 20
@@ -27,7 +27,7 @@ don't need files (e.g. .c file)
 200
 ```
 
-python can memorize the last value.    
+Python can memorize the last value using `_`.    
 
 ```python
 >>> u = 'df'
@@ -60,7 +60,7 @@ python can memorize the last value.
 >>> a = "Hello"
 ```
 
-can catinate string `print("hello," , ", ", "World") => Hello, World`
+Can catenate string by using `print` function. `print("hello," , ", ", "World") => Hello, World`
 
 ```python
 >>> z = "a"
@@ -70,8 +70,8 @@ can catinate string `print("hello," , ", ", "World") => Hello, World`
 >>> print("hello", ",", "World")
 Hello , Word
 ```
-(when concatinate python will **automatically put space in-between).   
-to use other seperator:
+(during concatenation, Python will **automatically** put space in-between).   
+If want to use other seperator:
 
 ```python
 >>> print("hello,", ", ", "World", sep="")
@@ -85,7 +85,9 @@ to use other seperator:
 ...is a and b
 ```
 
-**python is strong typed**, which means two type cannot be operated together. `e.g. int cannot + str`, have to convert.
+**Python is strong typed**, which means two type cannot be operated together. 
+
+e.g. `int + str` is invalid, one of them have to be converted.
 
 ```python
 >>> a = 10
@@ -97,13 +99,12 @@ error
 >>> str(a) + b
 "1010"
 ```
-To find type: `print(type(var))`.   
-Inside string, **Delimiter escaping using `\`.**, i.e. can use `\` to treat the following symbol as normal char.  
+To find type of a variable: `print(type(var))`.   
+Inside string, we can escaping character using `\` (also called **delimiter**). i.e. use `\` to treat the following symbol as normal char.  
 e.g. `'kat don\'t like dun'`. 
 
-
-string indexing same as C, **starting from 0**.  
-But can do substring as `string[starting : ending (but excluded)]`  
+string indexing is the same as C, **starting from 0**.  
+But we can extract substring using  `string[starting : ending (but excluded)]`  
 
 ```python
 >>> str = "python"
@@ -116,7 +117,7 @@ But can do substring as `string[starting : ending (but excluded)]`
 >>> str[3:]
 'hon'
 ```
-**can't modify a single char in a defined string**
+**We can't modify a single char in a defined string**
 
 ```python
 >>> str = "python"
@@ -124,9 +125,9 @@ But can do substring as `string[starting : ending (but excluded)]`
 error
 ```
 
-Data comes from console via `input()` **is always str**, better to use `int(input("insert num: ")`  
+Data that comes from console via `input()` **is always str**, it's better to use `int(input("insert num: ")`  
 
-**produce reversing string**    
+to produce **reversing string**    
 
 ```python
 word = input('Enter a string: ')
@@ -146,7 +147,9 @@ print(new_word)
 
 --------------------------------
 
-# if Statement   
+# if Statement
+
+`if` statement in Python is similar to C.
 
 ```python
 if (condition):
@@ -157,29 +160,29 @@ else:
     do something
 ```
 
-what is **false**:  
+What is valued as  **false**:  
 
-- 0
+- integer 0 
 - empty string
 - Boolean False  
 
   
-logic operator different from C:  
+
+logic operators are different from C:  
 
 |C | Python|
 |:----:|:-----:|
-|&&| and|
-| \|\||or|  
+|`&&`| `and` |
+| `\\` |`or`|
 
 [Return to Content Table](#Content-Table)
 
 -----------
-<a id="wl"></a>
 
-# while Loop  
+# `while` and `for` loop
 
 ```python
->>> while (i<n):
+>>> while (i < n):	# same as C
 ...     print(i)
 ...     i += 1
 0
@@ -192,7 +195,7 @@ logic operator different from C:
 7
 8
 9
->>> for i in range (1, 10):		# can do range(10)
+>>> for i in range (1, 10):		# same as range(10)
 ...      print(i)
 0
 1
@@ -204,7 +207,7 @@ logic operator different from C:
 7
 8
 9
->>> for i in range (1, 10, -1):
+>>> for i in range (1, 10, -1):	## negative 3rd argument = reverse
 ...     print(i)
 9
 8
@@ -221,17 +224,20 @@ logic operator different from C:
 
 -------
 # Data Structure
+
 Four main collection data types:
 
-* List (*ordered, mutable, allows duplicate*)
+* [List (*ordered, mutable, allows duplicate*)](# List)
 * Tuples
-* Sets
-* Dictionaries
+* [Sets](#Sets)
+* [Dictionaries](#Dictionary)
 
-<a id="l"></a>
+
 
 ## List
-**list**, can contain different datatype, e.g. `sth = [1, 2, "hello"]`   
+
+**list** can contain different datatype, e.g. `sth = [1, 2, "hello"]`   
+
 Using `for` loop in list:
 
 ```python
@@ -248,9 +254,10 @@ for letter in my_list:
 	print(letter)
 ```
 ###list comprehensions
-Can create list in a very concise way.
+
+List can be created in a very concise way **using expression**.
 `my_list = [expression for x in another_list]`  
-It will evaluate the expression on each element x in another_list.  
+It will evaluate the expression on each element `x` in `another_list`.  
 
 example:
 
@@ -264,13 +271,14 @@ example:
 [1.0, 2.0, 3.0, 4.0]	# divide '\' always return float, can do '\\'
 ```
 
-`.sorted()` return a list, can do `sorted(list)[index]`. 
+`.sorted()` return a list, can also do `sorted(list)[index]`. 
 
-some methods:  
-**.append()** append an item at the end of the list.  
-**.pop()** remove the last item from the end of the list.  
-**.insert(index, item)** insert item at index(starting from 0)  
-`[start : end]` thing can be used for list. 
+Some useful methods:  
+
+* `.append()` append an item at the end of the list.  
+* `.pop()` remove the last item from the end of the list.  
+* `.insert(index, item)` insert item at index(starting from 0)  
+* `[start : end]` thing can be used for list. 
 
 ``` python
 odd = [1, 2, 3]
@@ -294,13 +302,17 @@ error
 
 **.add()**, adding item into set.  
 **.remove()**, removing item from the set.  
-**Set doesn't allow duplicate, so adding existing item will change nothing.
+
+*Set doesn't allow duplicate, so adding existing item will change nothing.*
 
 [Return to Content Table](#Content-Table)
 
 ## Dictionary
-Similar to a list, being indexed using type rather than number. Has no order, every time run will have different order.   
-**Key** is the string before `:`, and followed by a value
+Similar to a list, dictionary is being indexed using **type** rather than number. Dictionary **is not ordered**; elements are in different order in each execution.   
+
+Dictionary has **key** and **value**, each key corresponds to a particular value.
+
+**Key** is the **string ** before `:`, and followed by a **value**
 
 example:
 
@@ -316,7 +328,7 @@ example:
 80
 ```
 
-Using with `for` loop:
+Operation with `for` loop:
 
 ```python
 marks = {"A": 72, "B": 95, "H": 85, "G": 95}
@@ -324,7 +336,7 @@ for key in marks.keys():
 	print("Key is", key)
 	print("Value", marks[key])
 
-=> # out put is not in order
+=> # output is not in order
 Key is H
 Value 85
 Key is G
@@ -335,22 +347,23 @@ Key is B
 Value 95
 ```
 
-Use dictonary to count object:
+Count object using dictionary:
 
 ```python
-fruits = []
+fruits = []	# a list containing user input
 
 choice = ""
-while choice != "q":
-	choice = input(enter another fruit")
-	fruits.append(choice)
+choice = input("enter another fruit: ")
+while choice != "q":	# continously scanning user input until 'q' is typed
+    fruits.append(choice)	# append the fruit name to the list
+	choice = input("enter another fruit: ")
 	
-fruit_quantities = {}
+fruit_quantities = {}	# a dictionary with key=fruit_name; value=num_of_times_that_each_fruit_appears
 for fruit in fruits:
-	if fruit in fruit_quantites:
+	if fruit in fruit_quantities:	# if the fruit is already in the dictionary
 		fruit_quantities[fruit] += 1
 	else:
-		fruit_quantities[fruit] = 1
+		fruit_quantities[fruit] = 1 
 
 for fruit in fruit_quantities:
 	print(fruit, fruit_quantities[fruit])
@@ -359,20 +372,20 @@ for fruit in fruit_quantities:
 lemon 4
 banana 1
 mango 1
-q 1		# it still taking the "q" input and I don't know why
-aaple 3
+apple 3
 ```
 
-`.key()` loop all keys in the dictionary. 
- 
- 
+`.key()` loops all keys in the dictionary. 
+
+
 ```python
 fruits = {'banana': 10, 'apple': 5}
+sum = 0
 for fruit in fruits.keys():
     ...
-    x += fruits[fruit] # dictionary[key] = the value
+    sum += fruits[fruit] # dictionary[key] = the value corresponding to that key
 ```
-to access both key and value in `for` loop, do:
+To access both key and value in `for` loop, do:
 
 ```python
 for fruit,value in fruits.items():

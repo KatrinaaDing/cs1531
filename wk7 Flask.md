@@ -16,6 +16,7 @@
 	* [filter](#filter)
 * [Template Inheritance](#Template-Inheritance)
 * [Navigation (href)](#n)
+	
 	* [url_for](#uf)
 * [Forms](#Forms)
 	* [Redirecting](#Redirecting) 
@@ -70,7 +71,7 @@ By default the port is 5000.
 
 ```python
 app.run(port=8085)
-``` 
+```
 [Return to Content Table](#Content-Table)
 ## routes
 
@@ -143,7 +144,7 @@ app.run(debug=True)
 ```
 [Return to Content Table](#Content-Table)
 
-<a id="pvih"></a>
+
 ### passing variable into html
 Jinja2 allows dynamic content on websites. To pass in a variable from `app.py` to the html file:  
 
@@ -296,7 +297,7 @@ Thank you for visiting my webpage!
 
 [Return to Content Table](#Content-Table)
 
-<a id='n'></a>
+
 ## Navigation (href)
 a link in html is defined by:
 
@@ -306,7 +307,7 @@ a link in html is defined by:
 
 [Return to Content Table](#Content-Table)
 
-<a id='uf'></a>
+
 ### url_for
 `url_for()` automatically return the coresponnding route of an specific function name.  
 Has to `form flask import url_for`.
@@ -341,7 +342,7 @@ Using `url_for` within a link (Benifit: don't have to modify every url):
 
 [Return to Content Table](#Content-Table)
 
-<a id='f'></a>
+
 ## Forms
 To generate an imput text box on webpage:
 

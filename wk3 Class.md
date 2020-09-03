@@ -14,9 +14,9 @@
 ```python
 class Person:	# the name of the class, starting with capital letter
 	def __init__(self, firstname, lastname):	# constructor, a special method, declare variables inside
-		self.first_name = firstname				# is called when create an instance of the class
-		self.last_name = lastname				# can be called by using the class's name followed by a bracket
-		self.dob = datetime.now()
+		self._first_name = firstname				# is called when create an instance of the class
+		self._last_name = lastname				# can be called by using the class's name followed by a bracket
+		self._dob = datetime.now()
 	
 	def walk(self, distance):					# a method
 		print(self.first_name, "is walking", distance, "meters")
@@ -165,14 +165,14 @@ class Product(ABC):
 		cls.__id = id	 
 ```
 
-
-
 [Content Table](#Content-Table)
 
 ## Abstraction and Inheritance
-**parent/super class:** have common behavior/attribute.  
-**child/sub class:** can overwrite the behavior of parent class.   
-**abstract:** an empty method (templet) inside parent class, allowing child classs to implement theirselves. This kind of method is **abstract method**, and the class containing abstract method is **abstract class**.
+
+* **Inheritance:** If a class want to inherit attributes and methods from another class, it can be a subclass (i.e. child) of that super class (i.e. parent).
+* **parent/super class:** have common behavior/attribute.  
+* **child/sub class:** can overwrite the behavior of parent class.   
+* **abstract:** an empty method (templet) inside parent class, allowing child classs to implement theirselves. This kind of method is **abstract method**, and the class containing abstract method is **abstract class**.
 
 example:
 
@@ -240,7 +240,8 @@ class Shape(ABC):		# bracket shows where does it "belong" to
 	...
 ```
 
-In child class, to call constructor(or method) from parent class, use `super().constructorName(attribute)`.  
+In child class, to call constructor (or method) from its parent class, use `super().constructorName(attribute)`. 
+
 e.g.
 
 ```python
@@ -251,14 +252,14 @@ def __init__(self, colour, radius) {
 ```
 
 **Why using `@abstractmethod`?**  
-If don't use `@abstractmethod`, when developer forget to overwite the method in child class, python will automatically implement parent's method (and basically do nothing). If implement `@abstractmethod` in parent class, forgeting to overwrite the method will give an error.
+If we don't use `@abstractmethod`, when developer forget to overwite the method in child class, python will automatically implement parent's method (and basically do nothing). If implement `@abstractmethod` in parent class, forgeting to overwrite the method will give an error.
 
 [Content Table](#Content-Table)
 
 ## Print a Class Instance
-Python can auto convert num to string for `print()`, but for class it doesn't know how to do, hence it will print the pointer by default.
+Python can auto convert num to string for `print()`, but for class it doesn't know how to do, hence it will print the **pointer** by default.
 
-So wee need another method to print class in string.  
+So we need another method to print class in string.  
 example:
 
 
