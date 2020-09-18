@@ -10,7 +10,6 @@
 
 [Return to README.md](https://github.com/KatrinaaDing/cs1531/blob/master/README.md)
 
-
 # Python
 
 Python is interpret, dynamically typed language. 

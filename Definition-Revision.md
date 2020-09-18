@@ -10,7 +10,6 @@
 
 	3. minimize risks of loss of time, money or even human-life.
 	
-	  
 * **Software development methology**
 	
 	* Waterfall
@@ -57,7 +56,7 @@
 		* Triggers discussions about what is the central to the problem and relationships to the sub-parts.
 		* Ensures that the system-to-be reflects a deep, shared understanding of the problem domain as the objects in the domain model will represent domain concepts.
 		* The common language foster unambiguous shared understanding of the problem domain and requirements.
-		
+	
 * **Functional and non-functional requirements** 
 
 * **Use case diagram**  
@@ -72,7 +71,7 @@
 		* <\<include\>>: A->B = A is included by B.
 		* <\<extend\>>: A->B = A extend to B.
 		* Abstract and generalised use-case: A B->C
-		
+	
 * **UML class diagram** (Unified Modelling Language)  
 	**Purpose**: describes the structure of the software system to be. Is the main building block of object-oriented modelling. Is used both for general conceptual modelling of the problem domain.
 	
@@ -214,7 +213,7 @@
 		* Release Plan: story point
 			* Negotiate release date: customer specify needed US; customer can't choose more than velocity.
 			* Project velocity: by time (velocity × US); by scope (total US / numbers of week)
-			 
+			
 		* Iteration Planning  
 			* developers and customer choose iteration size
 			* customer cannot change the story once it has begun (can chagne others)
@@ -230,12 +229,12 @@
 			* estimates in ideal programming dates of the task are summed up
 			* the velocity in task days overrides the velocity in "Release Plan"
 			* team holds meating half way through iteration
-			
+		
 	* **Product Backlog between iteration**
 		* Customer has flexibility to change priorities
 		* Items pulled by developers cannot be prioritized by customer
 		* Developers have steady goal
-		 
+		
 ## Design Quality
 
 * **Software Rot/Smell** (bad code)
@@ -265,7 +264,7 @@
  	* Testable 
 
 
-	 
+​	 
 * **SOLID Principle**
 	* **S**RP - Single Responsibility Principle
 		* One class should have only one responsibility 	
@@ -277,10 +276,10 @@
 	* **L**SP - Liskov Substitution Principle
 	* **I**SP - Interface Segregation Principle
 	* **D**IP - Dependency Inversion Principle 
-	 
+	
 
 ## Databases	
-	
+
 * **RDBMS (Relational Database Management System)**
 	* base on relational data model (i.e. stores data as tuples or records in tables)
 	* allows the ser to create relationship between tables
@@ -375,7 +374,6 @@
 	* Key constraint: has be unique but allow NULL
 	* Primary Key constraint: has to be unique but not allow NULL
 
-	
 * **Relational Schemas**
 	* SQL (Structured Qurey Language) provides the formalism to express relational schemas
 	* SQL provides a Data Definition Language (DDL) for creating relations  
